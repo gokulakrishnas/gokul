@@ -1,0 +1,241 @@
+
+
+.icon {
+  font-size: 24px;
+  color: #ff4081;
+}
+
+.icon1 {
+  font-size: 24px;
+  color: #3f51b5
+}
+
+.icon2 {
+  font-size: 24px;
+  color: #f44336;
+}
+
+.font {
+  font-size: 20px;
+}
+
+.cardbody {
+  width: 900%;
+  background-color: darkturquoise;
+}
+
+.equal {
+  font-size: 80px;
+  height: 50px;
+}
+
+.cardbody1 {
+  height: 185px;
+  background-color: #fb9678;
+}
+
+.rank1 {
+  font-size: 70px;
+  height: 20px;
+  width: 30px;
+  color: white;
+}
+
+.person {
+  padding: 0.5rem !important;
+  height: 140px;
+  width: 60px;
+  float: left;
+  width: 10%;
+}
+
+.comment-row {
+  border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+  padding: 15px;
+}
+
+.photo-pen {
+  line-height: 48px;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #03a9f3;
+}
+
+.label-pending {
+  color: #03a9f3;
+}
+
+.photo-pen1 {
+  line-height: 48px;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #00c292;
+}
+
+.photo-pen2 {
+  line-height: 48px;
+  color: #ffffff;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 100%;
+  background: #fb9678;
+}
+
+
+.label-pending {
+  color: #03a9f3;
+  background-color: #e8fdeb;
+}
+
+.label-pending1 {
+  padding-left: 60%;
+}
+
+.circle {
+  border-radius: 150%;
+  text-align: center;
+  color: gray;
+  vertical-align: middle;
+}
+
+.circle1 {
+  vertical-align: middle;
+}
+
+.app-content {
+  padding-left: 3%;
+}
+
+.fle-item {
+  width: 480px;
+  text-align: center;
+  height: 250px;
+  line-height: 100px;
+  margin: 2px;
+}
+
+.toolbar {
+  background-color: #C0C0C0;
+  margin: 2px;
+  position: relative;
+}
+
+.menu1 {
+  margin-left: 75%;
+}
+
+.flexitem {
+  width: 180px;
+  text-align: center;
+  height: 250px;
+  line-height: 100px;
+  margin: 2px;
+}
+
+.rank {
+  font-size: 90px;
+  height: 30px;
+  width: 50px;
+  color: brown;
+}
+
+.matcard {
+  width: 82.2%;
+  height: 1639.5PX;
+}
+
+.home1 {
+  color: #54667a;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 17px;
+  font-weight: 300px;
+}
+
+  .home1:hover {
+    color: #ff6849;
+  }
+
+.column {
+  padding-left: 280%;
+  color: orange;
+  box-sizing: border-box
+}
+
+.color {
+  color: #ff6849;
+  padding-left: 70%;
+}
+
+.action {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  visibility: visible;
+  color: white;
+}
+
+  .action:hover {
+    color: #686868;
+  }
+
+.label-success {
+  background-color: #e8fdeb;
+  color: #00c292;
+}
+
+.label-rejected {
+  background-color: #f9e7eb;
+  color: #fb9678;
+}
+
+.font {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+}
+
+.name {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: large;
+  padding-left: 10%;
+  color: grey;
+}
+
+.feeds {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: xx-large;
+  font-weight: 700;
+  background-color: lightgrey;
+  color: white;
+}
+
+.date {
+  padding-left: 12%;
+  color: grey;
+}
+
+.statement {
+  padding-left: 20%;
+  color: grey;
+}
+
+.main {
+  color: gray;
+}
+.username {
+  color: black;
+}
+
+.username:hover {
+    color: palevioletred;
+  }

@@ -1,0 +1,329 @@
+<div style="position: relative; max-width: 1350px; max-height: 642px;" [perfectScrollbar]="config">
+  <mat-sidenav-container>
+
+    <mat-sidenav #sidenav mode="side" class="app-sidenav">
+
+      <mat-nav-list style="width:270px">
+        <mat-card class="matcard">
+          <mat-icon class="rank">account_circle</mat-icon>
+          <h4 class="username">Welcome {{username}}</h4>
+
+          <table>
+            <tr>
+              <td><mat-icon>home</mat-icon></td>
+              <td>
+                <a href="page1.html">
+
+                  <span class="home1">Home</span>
+                </a>
+              </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+              <td> <mat-icon>dashboard</mat-icon></td>
+              <td>
+                <a href="page2.html">
+                  <span class="home1">Dashboard</span>
+                </a>
+              </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+              <td><mat-icon>apps</mat-icon></td>
+              <td>
+                <a href="page3.html">
+                  <span class="home1">Apps</span>
+                </a>
+              </td>
+            </tr>
+
+          </table>
+        </mat-card>
+      </mat-nav-list>
+    </mat-sidenav>
+    <div class="container" fxLayout="column" fxLayout.xs="row" fxLayoutWrap fxLayoutGap="0.08%" fxLayoutAlign="left" style="padding-left:0.008px;margin:9.8px;position: relative;margin-left:0.002px">
+
+      <mat-toolbar class="toolbar">
+
+        <div fxFlex=50 style="padding-top:10px">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+        <div fxFlex=50 style="margin-left:10px">
+
+          <mat-form-field class="example-full-width">
+            <div></div>
+
+            <input matInput aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let group of filteredGroups | async" [value]="group.groupname">
+
+                <i class="material-icons">people</i>
+                {{group.groupname}}
+              </mat-option>
+              <mat-option *ngFor="let group of filteredGroups1 | async" [value]="group.member[0].membername">
+                <i class="material-icons">person</i>
+                {{group.member[0].membername}}
+              </mat-option>
+
+            </mat-autocomplete>
+            <mat-icon>search</mat-icon>
+          </mat-form-field>
+
+        </div>
+        <div class="flex-item" fxFlex=10 style="padding-top:3px" class="menu1">
+          <button mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #appMenu="matMenu">
+            <button mat-menu-item (click)="openDialog()">Logout</button>
+            <button mat-menu-item>Help</button>
+          </mat-menu>
+        </div>
+      </mat-toolbar>
+      <br /><br />
+      <div fxLayout="column" fxLayout.xs="row" fxLayoutGap="0.008%" style="background-color:white; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+        <div style="padding-left:2.9%;padding-bottom:2.2%;padding-top:1.5%; font-size:16.5px">
+          Dashboard <span class="color">Dashboard / ModernDashboard</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <br /><br />
+    <div class="app-content">
+      <div class="container" fxLayout="column" fxLayoutGap="3%">
+
+        <div fxLayout="row" fxLayoutGap="0.1%" fxLayoutAlign="left" flex-wrap="wrap">
+          <mat-card style="width:22%;height:110px" fxFlex="23">
+            <div fxLayout="row" fxLayout.xs="row" fxLayoutGap="75%">
+              <mat-icon class="icon">
+                desktop_windows
+              </mat-icon>
+              <span class="font">24</span>
+            </div>
+            <br />
+
+            <div class="container" fxLayout="column" fxLayoutGap="3%">
+              <span>NewClients</span>
+              <mat-progress-bar mode="determinate" value="40" color="accent">
+              </mat-progress-bar>
+            </div>
+
+          </mat-card>
+          <mat-card style="width:22%;height:110px" fxFlex="23">
+            <div fxLayout="row" fxLayout.xs="row" fxLayoutGap="75%">
+              <mat-icon class="icon1">
+                edit
+              </mat-icon>
+              <span class="font">14</span>
+            </div>
+            <br />
+
+            <div class="container" fxLayout="column" fxLayoutGap="3%">
+              <span>  NewProjects</span>
+              <mat-progress-bar mode="determinate" value="40" color="primary">
+              </mat-progress-bar>
+            </div>
+
+          </mat-card>
+          <mat-card style="width:22%;height:110px" fxFlex="23">
+            <div fxLayout="row" fxLayout.xs="row" fxLayoutGap="75%">
+              <mat-icon class="icon2">
+                work_outline
+              </mat-icon>
+              <span class="font">21</span>
+            </div>
+            <br />
+
+            <div class="container" fxLayout="column" fxLayoutGap="3%">
+              <span>  NewInvoices</span>
+              <mat-progress-bar mode="determinate" value="40" color="warn">
+              </mat-progress-bar>
+            </div>
+
+          </mat-card>
+          <mat-card style="width:22%;height:110px" fxFlex="23">
+            <div fxLayout="row" fxLayout.xs="row" fxLayoutGap="75%">
+              <mat-icon class="icon">
+                insert_drive_file
+              </mat-icon>
+              <span class="font">21</span>
+            </div>
+            <br />
+
+            <div class="container" fxLayout="column" fxLayoutGap="3%">
+              <span>AllProjects</span>
+              <mat-progress-bar mode="determinate" value="40" color="accent">
+              </mat-progress-bar>
+            </div>
+
+          </mat-card>
+        </div> <br />
+        <div fxLayout="row" fxLayoutGap="3.5%" fxLayoutAlign="left">
+          <mat-card style="height:450px" fxFlex="40.5%">
+            <div fxLayout="row" #chartTarget fxFlex="90.5%">
+              chart target
+            </div>
+          </mat-card>
+          <div fxLayout="column" fxLayoutGap="3%" fxFlex="35.5%">
+            <div fxLayout="row" fxFlex="44%">
+              <mat-card class="cardbody">
+
+                <span style="color:white">
+                  Sales Analysis
+                  <mat-icon class="equal">equalizer</mat-icon>
+                </span>
+                <p style="color:white">$37 <br /></p>
+
+                <p style="color:white">April(2017)<br />(ISO Sales)
+              </mat-card>
+            </div>
+            <mat-card class="cardbody1">
+              <p style="color:white">
+                My Acting blown your Mind<br />
+                and you also laugh<br />
+                at the moment
+                <br />
+              </p><br />
+              <table>
+                <tr>
+                  <td>  <mat-icon class="rank1">account_circle </mat-icon></td>
+                  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                  <td>
+                    <p style="color:white">
+                      Mark
+                      <br />Actor
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </mat-card>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="3.0%" fxLayoutAlign="left">
+          <div fxLayout="column" fxLayoutGap="0.002%" fxLayoutAlign="left" fxFlex="41%">
+            <mat-card>
+              <span class="font">Recent Comments</span>
+            </mat-card>
+            <mat-card style="height:120px">
+              <span class="photo-pen">
+                <mat-icon>account_circle</mat-icon>
+              </span>
+              <span class="name">Karthik</span>
+              <div fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="left">
+                <span class="statement"> Hii here karthik part time blogger, full time coder.</span>
+                <div fxLayout="row" fxLayoutGap="0.008%">
+                  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+                  <span class="label-pending">pending</span>
+                  <div class="action">
+                    <mat-icon>create</mat-icon>
+                    <mat-icon>thumb_up_alt</mat-icon>
+                    <mat-icon>thumb_down_alt</mat-icon>
+                  </div>
+                  <span class="date">April10,1994</span>
+                </div>
+
+
+              </div>
+            </mat-card>
+            <mat-card style="height:120px">
+              <span class="photo-pen1">
+                <mat-icon>account_circle</mat-icon>
+              </span>
+              <span class="name">Hari</span>
+              <div fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="left">
+                <span class="statement">
+                  Hii this is Hari,born coder,full time hobby coding,
+                  coding.....
+                </span>
+                <div fxLayout="row" fxLayoutGap="0.008%">
+                  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                  <span class="label-success">Approved</span>
+                  <div class="action">
+                    <mat-icon>create</mat-icon>
+                    <mat-icon>thumb_up_alt</mat-icon>
+                    <mat-icon>thumb_down_alt</mat-icon>
+                  </div>
+                  <span class="date">April10,1994</span>
+                </div>
+
+
+              </div>
+            </mat-card>
+            <mat-card style="height:120px">
+              <span class="photo-pen2">
+                <mat-icon>account_circle</mat-icon>
+              </span>
+              <span class="name">Kannan</span>
+              <div fxLayout="column" fxLayoutGap="2%" fxLayoutAlign="left">
+                <span class="statement">  Hii here Kannan part time blogger, full time coder.</span>
+                <div fxLayout="row" fxLayoutGap="0.008%">
+                  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;
+                  <span class="label-rejected">Rejected</span>
+                  <div class="action">
+                    <mat-icon>create</mat-icon>
+                    <mat-icon>thumb_up_alt</mat-icon>
+                    <mat-icon>thumb_down_alt</mat-icon>
+                  </div>
+                  <span class="date">April10,1994</span>
+                </div>
+
+
+              </div>
+            </mat-card>
+          </div>
+          <mat-card fxFlex="37%">
+            <span>Feeds</span>
+            <div fxLayout="column" fxLayoutGap="15%">
+              <br /><br /><br />
+              <div fxLayout="row" fxLayoutGap="6%" fxLayoutAlign="left">
+                <span class="main">
+                  <mat-icon class="circle">notification_important</mat-icon>
+                  You have 4 pending tasks.
+                </span>
+
+              </div>
+              <div fxLayout="row" fxLayoutGap="6%" fxLayoutAlign="left">
+                <span class="main">
+                  <mat-icon class="circle1">account_circle</mat-icon>
+                  New user registered
+                </span>
+
+              </div><div fxLayout="row" fxLayoutGap="6%" fxLayoutAlign="left">
+                <span class="main">
+                  <mat-icon class="circle2">not_interested</mat-icon>
+                  Server #1 overloaded.
+                </span>
+
+              </div>
+              <div fxLayout="row" fxLayoutGap="6%" fxLayoutAlign="left">
+                <span class="main">
+                  <mat-icon class="circle3">insert_emoticon</mat-icon>
+                  New order received.
+                </span>
+
+              </div>
+            </div>
+          </mat-card>
+
+
+        </div>
+
+
+
+      </div>
+
+      <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>
+    </div>
+
+  </mat-sidenav-container>
+</div>
