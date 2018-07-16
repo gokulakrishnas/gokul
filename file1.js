@@ -1,4 +1,4 @@
 node
 {
-  git 'https://github.com/gokulakrishnas/gokul/new/master'
+git 'https://github.com/gokulakrishnas/gokul.git'
   }
